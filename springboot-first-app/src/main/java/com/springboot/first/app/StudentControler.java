@@ -21,7 +21,7 @@ public class StudentControler {
 		@GetMapping("/students")
 	public List<Student> getStudents(){
 		List<Student> students = new ArrayList<>();
-		students.add(new Student("Shusma", "Subedi"));
+		students.add(new Student("Shusma", "Gautam"));
 		students.add(new Student("Hari", "Sharma"));
 		students.add(new Student("Rita", "Sami"));
 		students.add(new Student("Auror", "Karki"));
@@ -33,7 +33,7 @@ public class StudentControler {
 		return students;
 	}
 		
-		//http://localhost:8080/student/shusma/subedi
+		//http://localhost:8080/student/shusma/gautam
 		
 		@GetMapping("/student/{firstName}/{lastName}")
 		public Student studentPathVariable(@PathVariable("firstName")String firstName, @PathVariable("lastName")String lastName) {
@@ -42,7 +42,7 @@ public class StudentControler {
 		
 		
 		//build rest API to handle query parameters
-		//http://localhost/student/query?firstName=Shusma&lastName=Subedi
+		//http://localhost/student/query?firstName=Shusma&lastName=gautam
 		@GetMapping("/student/query")
 		public Student studentQueryParam(
 				@RequestParam(name = "firstName") String firstName,
